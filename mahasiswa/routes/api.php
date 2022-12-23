@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('mahasiswa', [MahasiswaController::class, 'index']);
+Route::post('mahasiswa/store', [MahasiswaController::class, 'store']);
+Route::get('mahasiswa/show/{id}', [MahasiswaController::class, 'show']);
+
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
